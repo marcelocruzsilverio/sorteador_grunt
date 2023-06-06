@@ -5,6 +5,9 @@
 @corDoTextoDoBotao: #000;
 @corDoFundoDoBotao: #f7b731;
 
+@breakpointMobile: ~"(max-width: 767px)";
+@breakpointTablet: ~"(min-width: 768px) and (max-width: 959px)";
+
 body {
     background-color: @corDeFundo;
     font-family: @fontePrincipal;
@@ -14,6 +17,10 @@ body {
 h1 {
     font-family: @fonteDoTitulo;
     font-size: 3em;
+
+    @media @breakpointMobile {
+        font-size: 1.5em;
+    }
 }
 
 main {
@@ -22,6 +29,15 @@ main {
     margin: 0 auto;
     font-size: 2em;
     text-align: center;
+
+    @media @breakpointMobile {
+        max-width: 80%;
+    }
+
+    @media @breakpointTablet {
+        max-width: 90%;
+    }
+
 }
 
 button {
@@ -34,6 +50,11 @@ button {
     background-color: @corDoFundoDoBotao;
     color: @corDoTextoDoBotao;
     font-family: @fontePrincipal;
+
+    @media @breakpointMobile {
+        margin-top: 12px;
+        font-size: .8em;
+    }
 }
 
 input {
@@ -46,6 +67,15 @@ input {
     text-align: center;
     color: @corDoTexto;
     border-bottom: 6px solid @corDoTexto;
+
+    @media @breakpointMobile {
+        margin: 8px auto 0;
+    }
+
+    @media @breakpointTablet {
+        margin: 14px auto 0;
+    }
+
 }
 
 .resultado {
@@ -53,6 +83,10 @@ input {
     margin-top: 120px;
     border: 8px dotted #fff;
     display: none;
+
+    @media @breakpointMobile {
+        margin-top: 60px;
+    }
 
     span {
         font-weight: bold;
